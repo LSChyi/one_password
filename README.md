@@ -1,14 +1,14 @@
 # One Password
-This is a simplified version of one password, user only need to remember one password, and generate different passwords for each service.
+This is a cross-platform, simplified version of one password, user only need to remember one password, and generate different passwords for each service.
 
 ## Prebuild GUI App
 There are some prebuild GUI apps from gui.py.  
 These apps are built from pyinstaller.
 
 ### OSX
-[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/6E795D0812FC4AA9A3B6DF636F4E68A2QQY)  
+[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/61089A648A504B3C9632C6DD5EBB84A1QQY)  
 
-## Windows
+### Windows
 [Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/96F4918037EE4D7D8467D3C7BC2F6FE4QQY)
 
 ## How to use
