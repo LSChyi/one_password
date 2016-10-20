@@ -9,6 +9,7 @@ There are two interfaces to use this project.
 	pyton3 one_password.py
 	
 ### GUI
+![](img/gui screen shot.png)
 
 	python3 gui.py
 
