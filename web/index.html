@@ -42,8 +42,9 @@
         border-top: 1px solid #e0e0e0;
         padding-top: 35px;
     }
-	#title_text {
-    	text-align: center;
+    
+    #title_text {
+        text-align: center;
     }
     </style>
 </head>
@@ -56,8 +57,30 @@
     </header>
     <div id="content-wrapper" class="mui--text-center">
         <div class="mui--appbar-height"></div>
-        <br>
-        <button class="mui-btn mui-btn--raised">Get started</button>
+        <br />
+        <br />
+        <div class="mui-container">
+            <form>
+                <div class="mui-textfield">
+                    <input type="password" placeholder="Easy Remembered Password">
+                </div>
+                <div class="mui-textfield">
+                    <input type="text" placeholder="Service">
+                </div>
+                <div class="mui-textfield">
+                    <input type="number" placeholder="Length (default: 10)">
+                </div>
+                <div class="mui-checkbox">
+                    <label>
+                        <input type="checkbox" value=""> Show Password
+                    </label>
+                </div>
+                <button type="submit" class="mui-btn mui-btn--raised">Generate Password</button>
+            </form>
+            <div class="mui-textfield">
+                <input type="text" placeholder="Output Password" disabled>
+            </div>
+        </div>
     </div>
     <footer>
         <div class="mui-container mui--text-center">
