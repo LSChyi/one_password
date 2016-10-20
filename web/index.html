@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>One Password</title>
+    <link rel="stylesheet" type="text/css" href="./lib/node_modules/muicss/dist/css/mui.min.css" />
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+    
+    html,
+    body,
+    input,
+    textarea,
+    buttons {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+    }
+    
+    #content-wrapper {
+        min-height: 100%;
+        margin-bottom: -100px;
+        padding-bottom: 100px;
+    }
+    
+    footer {
+        height: 100px;
+        background-color: #eee;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 35px;
+    }
+	#title_text {
+    	text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="mui-appbar mui--z1">
+        <div class="mui-container">
+            <h1 class="mui--text-title" id="title_text">One Password</h1>
+        </div>
+    </header>
+    <div id="content-wrapper" class="mui--text-center">
+        <div class="mui--appbar-height"></div>
+        <br>
+        <button class="mui-btn mui-btn--raised">Get started</button>
+    </div>
+    <footer>
+        <div class="mui-container mui--text-center">
+            <a href="https://github.com/LSChyi/one_password">Github Project</a>
+        </div>
+    </footer>
+    <!-- JS -->
+    <script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/muicss/dist/angular/mui-angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/muicss/dist/js/mui.min.js"></script>
+</body>
+
+</html>
