@@ -10,6 +10,9 @@ There are two interfaces to use this project
 	
 ### GUI
 
+	python3 gui.py
+
+or double click the gui.py
 
 ## Hash
 This project use sha256 to hash the password and service you enter, then output as base64 string, for base64 contains upper cases, lower cases and numbers.
