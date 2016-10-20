@@ -2,11 +2,14 @@
 This is a simplified version of one password, user only need to remember one password, and generate different passwords for each service.
 
 ## Prebuild GUI App
-There are some prebuild GUI apps from gui.py.
+There are some prebuild GUI apps from gui.py.  
+These apps are built from pyinstaller.
 
 ### OSX
 [Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/6E795D0812FC4AA9A3B6DF636F4E68A2QQY)  
-This app is built from pyinstaller.
+
+## Windows
+[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/96F4918037EE4D7D8467D3C7BC2F6FE4QQY)
 
 ## How to use
 There are two interfaces to use this project.
