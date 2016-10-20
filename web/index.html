@@ -46,6 +46,10 @@
     #title_text {
         text-align: center;
     }
+
+    .hidden {
+		display: none;
+    }
     </style>
 </head>
 
@@ -55,19 +59,22 @@
             <h1 class="mui--text-title" id="title_text">One Password</h1>
         </div>
     </header>
-    <div id="content-wrapper" class="mui--text-center" ng-controller="passwordCtrl">
+    <div id="content-wrapper" class="mui--text-center" ng-controller="passwordCtrl" ng-init="init()">
         <div class="mui--appbar-height"></div>
         <br />
         <br />
         <div class="mui-container">
             <form>
                 <div class="mui-textfield">
+                    <label>Remembered Password</label>
                     <input type="password" placeholder="Easy Remembered Password" ng-model="original_password">
                 </div>
                 <div class="mui-textfield">
+                    <label>Service</label>
                     <input type="text" placeholder="Service" ng-model="service">
                 </div>
                 <div class="mui-textfield">
+                    <label>Length</label>
                     <input type="number" placeholder="Length (default: 10)" ng-model="length">
                 </div>
                 <div class="mui-checkbox">
@@ -75,10 +82,12 @@
                         <input type="checkbox" value="" ng-model="show_pass"> Show Password
                     </label>
                 </div>
-                <button type="submit" class="mui-btn mui-btn--primary">Generate Password</button>
+                <button id="copy_btn" data-clipboard-target="#output_pass" type="submit" class="mui-btn mui-btn--primary" ng-click="gen_pass()">Generate Password</button>
             </form>
+            <br />
             <div class="mui-textfield">
-                <input type="text" placeholder="Output Password" disabled ng-model="output_pass">
+                <label>Output Password</label>
+                <input id="output_pass" type="text" placeholder="Output Password" readonly ng-model="output_pass" ng-show="show_pass">
             </div>
         </div>
     </div>
@@ -92,12 +101,32 @@
     <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/muicss/dist/js/mui.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/js-sha256/build/sha256.min.js"></script>
-    <script type="text/javascript" src="./lib/node_modules/js-base64/base64.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/clipboard/dist/clipboard.min.js"></script>
     <script type="text/javascript">
-    	angular.module("onePasswordApp", [])
-    		.controller('passwordCtrl', function($scope) {
+    function hexToBytes(hex) {
+        for (var bytes = [], c = 0; c < hex.length; c += 2)
+            bytes.push(parseInt(hex.substr(c, 2), 16));
+        return new Uint8Array(bytes);
+    }
 
-    		})
+    angular.module("onePasswordApp", [])
+        .controller('passwordCtrl', function($scope, $timeout) {
+        	$scope.init = function() {
+        		$scope.length = 10;
+        		new Clipboard('#copy_btn', {
+        			text: function(trigger) {
+        				return $scope.output_pass;
+        			}
+        		});	
+        	}
+            
+            $scope.gen_pass = function() {
+                var pass_phrase = $scope.original_password + $scope.service;
+                sha256_bytes = hexToBytes(sha256(pass_phrase));
+                $scope.output_pass = btoa(String.fromCharCode.apply(null, sha256_bytes)).slice(0, $scope.length);
+                alert("Password copied");
+            }
+        })
     </script>
 </body>
 
