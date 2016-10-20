@@ -12,7 +12,7 @@ There are two interfaces to use this project
 
 
 ## Hash
-This project use sha256 to hash the password and service you enter, then output as base64 string, for base64 contain upper case, lower case and number.
+This project use sha256 to hash the password and service you enter, then output as base64 string, for base64 contains upper cases, lower cases and numbers.
 
 ## License
 This project is published under GPLv3
