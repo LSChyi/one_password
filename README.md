@@ -1,6 +1,14 @@
 # One Password
 This is a cross-platform, simplified version of one password, user only need to remember one password, and generate different passwords for each service.
 
+## Web Interface
+[Demo](http://homepage.ntu.edu.tw/~r04921056/)
+![](img/web screen shot.PNG)  
+There is also a web interface, since all password calculation is at local, even not useing https, your password is still safe.  
+After calculating your password, the output password will be copied into your clipboard.  
+This function has been tested on iphone with safari.  
+You can run your own one password server, all of the web source code is in 'web' folder.
+
 ## Prebuild GUI App
 There are some prebuild GUI apps from gui.py.  
 These apps are built from pyinstaller.
