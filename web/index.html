@@ -49,36 +49,36 @@
     </style>
 </head>
 
-<body>
+<body ng-app="onePasswordApp">
     <header class="mui-appbar mui--z1">
         <div class="mui-container">
             <h1 class="mui--text-title" id="title_text">One Password</h1>
         </div>
     </header>
-    <div id="content-wrapper" class="mui--text-center">
+    <div id="content-wrapper" class="mui--text-center" ng-controller="passwordCtrl">
         <div class="mui--appbar-height"></div>
         <br />
         <br />
         <div class="mui-container">
             <form>
                 <div class="mui-textfield">
-                    <input type="password" placeholder="Easy Remembered Password">
+                    <input type="password" placeholder="Easy Remembered Password" ng-model="original_password">
                 </div>
                 <div class="mui-textfield">
-                    <input type="text" placeholder="Service">
+                    <input type="text" placeholder="Service" ng-model="service">
                 </div>
                 <div class="mui-textfield">
-                    <input type="number" placeholder="Length (default: 10)">
+                    <input type="number" placeholder="Length (default: 10)" ng-model="length">
                 </div>
                 <div class="mui-checkbox">
                     <label>
-                        <input type="checkbox" value=""> Show Password
+                        <input type="checkbox" value="" ng-model="show_pass"> Show Password
                     </label>
                 </div>
-                <button type="submit" class="mui-btn mui-btn--raised">Generate Password</button>
+                <button type="submit" class="mui-btn mui-btn--primary">Generate Password</button>
             </form>
             <div class="mui-textfield">
-                <input type="text" placeholder="Output Password" disabled>
+                <input type="text" placeholder="Output Password" disabled ng-model="output_pass">
             </div>
         </div>
     </div>
@@ -89,8 +89,16 @@
     </footer>
     <!-- JS -->
     <script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="./lib/node_modules/muicss/dist/angular/mui-angular.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/muicss/dist/js/mui.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/js-sha256/build/sha256.min.js"></script>
+    <script type="text/javascript" src="./lib/node_modules/js-base64/base64.min.js"></script>
+    <script type="text/javascript">
+    	angular.module("onePasswordApp", [])
+    		.controller('passwordCtrl', function($scope) {
+
+    		})
+    </script>
 </body>
 
 </html>
