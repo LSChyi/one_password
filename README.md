@@ -14,7 +14,7 @@ There are some prebuild GUI apps from gui.py.
 These apps are built from pyinstaller.
 
 ### OSX
-[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/61089A648A504B3C9632C6DD5EBB84A1QQY)  
+[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/93507095E8F340F8AB20C86D96443E7BQQY)  
 
 ### Windows
 [Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/96F4918037EE4D7D8467D3C7BC2F6FE4QQY)
