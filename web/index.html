@@ -85,9 +85,9 @@
                 <button id="copy_btn" data-clipboard-target="#output_pass" type="submit" class="mui-btn mui-btn--primary" ng-click="gen_pass()">Generate Password</button>
             </form>
             <br />
-            <div class="mui-textfield">
+            <div class="mui-textfield" ng-show="show_pass">
                 <label>Output Password</label>
-                <input id="output_pass" type="text" placeholder="Output Password" readonly ng-model="output_pass" ng-show="show_pass">
+                <input id="output_pass" type="text" placeholder="Output Password" readonly ng-model="output_pass" >
             </div>
         </div>
     </div>
