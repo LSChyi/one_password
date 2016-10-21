@@ -30,7 +30,7 @@ def switch_show_pass(event):
     else:
         password.insert(END, "*" * len(password_str))
 
-Label(window, text="Easy remember passwod").pack()
+Label(window, text="Remembered passwod").pack()
 ori_pass.pack()
 Label(window, text="Service").pack()
 service.pack()
