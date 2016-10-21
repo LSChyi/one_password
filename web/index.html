@@ -121,7 +121,7 @@
         	}
             
             $scope.gen_pass = function() {
-                var pass_phrase = $scope.original_password + $scope.service;
+                var pass_phrase = $scope.original_password + $scope.service + $scope.length.toString();
                 sha256_bytes = hexToBytes(sha256(pass_phrase));
                 $scope.output_pass = btoa(String.fromCharCode.apply(null, sha256_bytes)).slice(0, $scope.length);
                 alert("Password copied");
