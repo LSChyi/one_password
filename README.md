@@ -15,9 +15,11 @@ These apps are built from pyinstaller.
 
 ### OSX
 [Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/93507095E8F340F8AB20C86D96443E7BQQY)  
+sha256sum: aee707942b4cc2bfc791ecfecfc0a042f40ab3b23f8f2a73eeea208bd24e3296
 
 ### Windows
-[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/96F4918037EE4D7D8467D3C7BC2F6FE4QQY)
+[Download from NTU space](https://www.space.ntu.edu.tw/navigate/s/070517334C9440B9B3E653A7E84ED268QQY)  
+sha256sum: 7d7d51bd62a5f00d2400e964316bbf9f07357bd9f0dab2a80e613881889250f5
 
 ## How to use
 There are two interfaces to use this project.
