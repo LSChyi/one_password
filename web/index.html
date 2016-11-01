@@ -83,6 +83,8 @@
                     </label>
                 </div>
                 <button id="copy_btn" data-clipboard-target="#output_pass" type="submit" class="mui-btn mui-btn--primary" ng-click="gen_pass()">Generate Password</button>
+                <br />
+                <button id="clean_btn" class="mui-btn" ng-click="clean()">Clean Result</button>
             </form>
             <br />
             <div class="mui-textfield" ng-show="show_pass">
@@ -117,7 +119,13 @@
         			text: function(trigger) {
         				return $scope.output_pass;
         			}
-        		});	
+        		});
+        		new Clipboard('#clean_btn', {
+        			text: function(trigger) {
+        				return "";
+        			}
+        		});
+        		$('form div:first-child input').focus();
         	}
             
             $scope.gen_pass = function() {
@@ -125,6 +133,13 @@
                 sha256_bytes = hexToBytes(sha256(pass_phrase));
                 $scope.output_pass = btoa(String.fromCharCode.apply(null, sha256_bytes)).slice(0, $scope.length);
                 alert("Password copied");
+            }
+
+            $scope.clean = function() {
+            	$scope.output_pass = "";
+            	$scope.service = "";
+            	$scope.original_password = "";
+            	$scope.length = 10;
             }
         })
     </script>
